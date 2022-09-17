@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="funkcije.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Zadatak pre uslova -->
+    Izracunati zbir brojeva:
+    <div>
+        <input id="sabirak1" type="text"/> + <input id="sabirak2" type="text" />
+        <button onclick="zbir()"> = </button>&nbsp;<span id="zbir"></span>
+    </div>
+    <br>
+    <div>
+    Izabrati model telefona:
+        <select onclick="promeniSliku(this)">
+            <option value="galaxyS7.JPG">Samsung Galaxy S7</option>
+            <option value="iphone6s.JPG">iPhone 6S</option>
+            <option value="lg-nexus5.JPG">LG Nexus 5</option>
+        </select>
+        <br><br>
+        <img id="telefon" src="images/galaxyS7.JPG" width="300">
+    </div>
+    <br>
+    <!-- Zadatak sa uslovima -->
+    <div>
+        Ukljuci/Iskljuci sijalicu:
+        <img src="images/pic_bulboff.gif" width="100" onclick="ukljuciIskljuci(this)">
+    </div>
+    
+
+</body>
+</html>

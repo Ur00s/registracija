@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function changetext(id)
+{
+  id.innerHTML="Ucite, deco, i dan i noc!";
+}
+</script>
+</head>
+<body>
+
+<h1 onclick="this.innerHTML='Ooops!'">Click on this text!</h1>
+<h1 onclick="changetext(this)">Click on text 01!</h1>
+<h1 onclick="changetext(this)">Click on text 02!</h1>
+
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Events</title>
+		<style type="text/css">
+			.st0
+			{
+				background-color : #eeee00;
+			}
+			
+			.st1
+			{
+				background-color : #eeeeff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="cnt">
+			<p id="pasus" onclick="activePar()" class="st0">
+				Ovde se menja pozadina na klik
+			</p>
+			<p id="pasusNovo" onmouseover="prelet()">
+				Predji preko pasusa...
+			</p>
+		</div>
+		<script type="text/javascript">
+			stil = 1
+		    function activePar()
+			{
+				document.getElementById("pasus").className = "st" + stil;
+				stil = (stil + 1) % 2
+			}
+			
+			brojPreleta = 0;
+			
+			function prelet()
+			{
+				document.getElementById("pasusNovo").innerHTML += "Prelet " + ++brojPreleta + "...";
+			}
+		</script>
+	</body>
+</html>

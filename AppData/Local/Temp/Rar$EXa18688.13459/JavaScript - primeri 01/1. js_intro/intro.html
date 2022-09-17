@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>JS Intro</title>
+		<script type="text/javascript" src="intro.js">
+		</script>
+		<script type="text/javascript">
+			globalna = 0;
+			// napomenuti tipove podataka,
+			// kao i da jezik nije strogo tipiziran
+			function drugiPoseban()
+			{
+				var lokalna = 0;
+				alert("Globalna je : " + globalna + 
+					", a lokalna je " + lokalna);
+				lokalna++
+				globalna++;
+			}
+		</script>
+	</head>
+	<body>
+		<p id="start">
+			Sadrzaj starta....
+		</p>
+		<!-- prvo ovo... -->
+		<script type="text/javascript">
+			<!--
+		    koji = 1;
+			//napomenuti opasnost write-a
+			document.write("<p>Pasus " + koji + "</p>" );
+			koji++;
+			document.write("<p>Pasus " + koji + "</p>" );
+			/*
+			pojasniti i komentare,
+			kako single line, tako i multiline...
+			*/
+			document.write("<p> " + plus(4,3) + "</p>" );
+			document.write("<p> " + plus(4,"3") + "</p>" );
+			
+			i = 0
+			
+			//uraditi isto sa for
+			while(i < 3)
+			{
+				document.write("<p> " + plus(i,"3") + "</p>" );
+				if(i % 2 == 0)
+					document.write("<hr/>");
+				i++;
+			}
+			//-->
+		</script>
+		<p onclick="poseban()">
+			Poseban pasus...
+		</p>
+		<p onclick="drugiPoseban()">
+			Drugi poseban pasus...
+		</p>
+   </body>
+</html>

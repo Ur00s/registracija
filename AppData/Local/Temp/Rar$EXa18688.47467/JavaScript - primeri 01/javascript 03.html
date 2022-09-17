@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function mOver(obj)
+{
+   obj.innerHTML="Thank You"
+}
+
+function mOut(obj)
+{
+   obj.innerHTML="Mouse Over Me"
+}
+
+function mDown(obj)
+{
+obj.style.backgroundColor="#1ec5e5";
+obj.innerHTML="Release Me"
+}
+
+function mUp(obj)
+{
+obj.style.backgroundColor="#D94A38";
+obj.innerHTML="Thank You"
+}
+
+function myFunction()
+{
+alert("You pressed a key inside the input field");
+}
+</script>
+</head>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse Over Me</div><br>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:90px;height:20px;padding:40px;">Click Me</div><br>
+<input type="text" onkeydown="myFunction()">
+
+</body>
+</html> 

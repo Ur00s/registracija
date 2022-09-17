@@ -1,0 +1,44 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. -->
+<!-- See LICENSE in the project root for license information -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OP Experimentation</title>
+    <script type='text/javascript'>
+        var _perfData = {};
+        _perfData.start = performance.now();
+    </script>
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/beta/hosted/excel.js"></script>
+    <script type='text/javascript'>
+        _perfData.excelJsEnd = performance.now();
+        _perfData.excelJsDuration = _perfData.excelJsEnd - _perfData.start;
+        Office.onReady(function (hostAndPlatform) {
+            _perfData.officeOnReadyPage = performance.now();
+            _perfData.officeOnReadyPageDuration = _perfData.officeOnReadyPage - _perfData.start;
+        });
+
+        Office.onReady().then(function() {
+            _perfData.officeOnReadyPageThen = performance.now();
+            _perfData.officeOnReadyPageThenDuration = _perfData.officeOnReadyPageThen - _perfData.start;
+        });
+
+    </script>
+    <script type='text/javascript'>
+        _perfData.appJsStart = performance.now();
+    </script>
+    <script type='text/javascript'>
+        _perfData.appJsEnd = performance.now();
+    </script>
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    crossorigin="anonymous"/>
+</head>
+
+<body>
+  <div id="app"></div>
+<script type="text/javascript" src="reactMain.js"></script><script type="text/javascript" src="mainUI.js"></script></body>
+
+</html>
